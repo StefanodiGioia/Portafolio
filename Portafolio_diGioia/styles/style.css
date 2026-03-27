@@ -226,4 +226,20 @@ body.modo-oscuro dialog {
 body.modo-oscuro a {
     color: #60a5fa;
 }
+/* --- ETAPA 9: ESTILOS DE LA CAJA DESTACADA (MANTENIMIENTO) --- */
+
+.caja-destacada {
+    text-align: center; 
+    margin-top: 40px; 
+    padding: 25px; 
+    background-color: #e2e8f0; /* Color gris clarito elegante para el modo día */
+    border-radius: 8px; /* Bordes redondeados acordes al resto del sitio */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de tema */
+}
+
+/* Regla para que la caja se oscurezca cuando activamos el Modo Oscuro */
+body.modo-oscuro .caja-destacada {
+    background-color: #1e293b; /* Fondo azul noche profundo */
+    border: 1px solid #334155; /* Borde sutil para que no se pierda en el fondo oscuro */
+}
 
