@@ -1,8 +1,9 @@
 /* HOJA DE ESTILOS CSS (Cascading Style Sheets) */
 
 body {
-    font-family: Arial, sans-serif; /* Define la tipografía. Si no está Arial, usa otra sin adornos */
-    background-color: #f8fafc; /* Fondo claro elegante (gris muy suave, casi blanco) */
+    /* Cambiamos la fuente global a "Inter", la tipografía más usada en apps modernas */
+    font-family: 'Inter', sans-serif; 
+    background-color: #f8fafc;
     color: #334155; /* Color del texto (un gris muy oscuro para no cansar la vista) */
     margin: 0; /* Elimina el margen blanco que los navegadores ponen por defecto */
     transition: background-color 0.3s, color 0.3s; /* Prepara el terreno para un cambio de tema suave */
@@ -241,5 +242,45 @@ body.modo-oscuro a {
 body.modo-oscuro .caja-destacada {
     background-color: #1e293b; /* Fondo azul noche profundo */
     border: 1px solid #334155; /* Borde sutil para que no se pierda en el fondo oscuro */
+}
+/* --- ETAPA 10: ESTÉTICA DEL SEGUIDOR DE CURSOR --- */
+#cursor-follower {
+    position: fixed; /* Lo saca del flujo normal para moverse libremente */
+    width: 20px;
+    height: 20px;
+    background-color: rgba(59, 130, 246, 0.4); /* Azul traslúcido */
+    border-radius: 50%; /* Lo convierte en un círculo perfecto */
+    
+    pointer-events: none; /* INVISIBLE PARA CLICS: Permite cliquear lo que hay debajo */
+    z-index: 9999; /* Lo coloca en la capa más alta (por encima de todo) */
+    
+    transition: transform 0.1s ease-out; /* Suaviza el movimiento */
+    transform: translate(-50%, -50%); /* Centra el círculo exactamente en la punta del cursor */
+}
+/* --- ETAPA 11: GLASSMORPHISM Y SCROLLBAR --- */
+
+/* Modificamos el menú para que parezca de cristal (tipo Windows 11 o macOS) */
+nav {
+    background-color: rgba(30, 41, 59, 0.8) !important; /* Azul oscuro con 80% de opacidad */
+    backdrop-filter: blur(10px); /* Pide a la tarjeta gráfica que desenfoque lo que pasa por detrás */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores basados en Safari */
+}
+
+/* Personalización del Scrollbar (Barra de desplazamiento) */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9; /* Color de la pista o "carril" */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* Color azul moderno para la barrita móvil */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* Azul más oscuro al pasar el mouse */
 }
 
