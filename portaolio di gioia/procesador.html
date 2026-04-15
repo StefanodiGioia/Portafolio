@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación: La Placa Base | Bitácora Stefano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo-seccion">Análisis del CPU y Gestión Térmica</h2>
+        
+        <div class="contenedor-tarjetas">
+            <article class="tarjeta">
+                <img src="images/nucleos y cache.jpg" alt="Arquitectura CPU">
+                <h3>Arquitectura: Núcleos e IPC</h3>
+                <ul>
+                    <li><strong>Cores vs Threads:</strong> El núcleo es físico; el hilo es lógico (Hyper-Threading) para paralelismo.</li>
+                <li><strong>Frecuencias:</strong> Base (mínima) y Turbo (máxima automática según carga).</li>
+                <li><strong>IPC:</strong> Capacidad de trabajo por ciclo. Un CPU nuevo a 3GHz rinde más que uno viejo a 4GHz por mejor IPC.</li>
+                <li><strong>Caché L1-L3:</strong> Memoria interna ultra rápida para datos inmediatos.</li>
+                <li><strong>iGPU:</strong> Gráficos integrados (Ej: Intel sin letra "F" o AMD con "G").</li>
+                </ul>
+            </article>
+
+            <article class="tarjeta">
+                <img src="images/aire o liquida.jpg" alt="Disipadores y Liquida">
+                <h3>Sistemas de Enfriamiento</h3>
+                <ul>
+                    <li><strong>Aire:</strong> Heat Pipes de cobre con cambio de fase de líquido a gas.</li>
+                <li><strong>Líquida (AIO):</strong> Bloque, bomba y radiador para CPUs de alto TDP.</li>
+                <li><strong>Pasta Térmica:</strong> Obligatoria para cubrir imperfecciones microscópicas y eliminar el aire aislante entre el IHS y el metal.</li>
+                </ul>
+            </article>
+
+            <article class="tarjeta">
+                <img src="images/cputrotling.png" alt="Throttling y OC">
+                <h3>Límites y Técnicas de Usuario</h3>
+                <ul>
+                    <li><strong>Thermal Throttling:</strong> Estrangulamiento de velocidad para proteger el silicio del calor excesivo.</li>
+                <li><strong>Overclocking:</strong> Aumento manual de GHz y voltaje (riesgo de degradación).</li>
+                <li><strong>Undervolting:</strong> Bajar voltaje manteniendo frecuencia; ideal para enfriar notebooks gaming.</li>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>Stefano di Gioia - Especialización Informática 2026</p>
+    </footer>
+
+</body>
+</html>
